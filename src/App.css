@@ -1,7 +1,6 @@
 .App, 
 .Layout {
   text-align: center;
-  background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat;
 }
 
 .App-logo {
@@ -15,26 +14,12 @@
   }
 }
 
-.App-header, 
-.ant-layout-header {
-  /* background: linear-gradient(#e66465, #9198e5); */
-  /* background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat; */
-  min-height: 25vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat !important;
-}
-
 .ant-layout-content {
-  background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat;
+  background: transparent !important;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #b909a2;
 }
 
 @keyframes App-logo-spin {
@@ -46,14 +31,61 @@
   }
 }
 
-#inputSearch {
-  font-size: 18px;
+.main-container {
+  padding: 0 16px;
+  margin: 200px 600px
+}
+
+.tag-container {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-container {
+  display: inline;
+}
+
+#icon-search {
+  position: relative;
+  left: -40px;
+  top: 2px;
+}
+
+#icon-search:hover {
+  color: #ffe !important;
+  opacity: 1 !important;
+} 
+
+#input-search {
+  font-size: 20px;
   line-height: 24px;
-  color: rgba(255,255,255,.5);
-  width: 100%;
+  color: #ffe;
+  width: 80%;
   padding: 16px 120px 16px 20px;
-  margin: 0;
-  border-radius: 56px;
+  margin: 10px 0;
   background: rgba(255,255,255,.2);
   cursor: pointer;
+}
+
+#input-search::placeholder {
+  color: rgba(255,255,255,.5);
+}
+
+.tag-button {
+  font-size: 16px !important;
+  margin: 5px !important;
+  padding: 20px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.tag-button:hover{
+  color: #b909a2 !important;
+}
+
+.tag-button:focus{
+  color: #b909a2 !important;
 }
