@@ -29,11 +29,9 @@ function App() {
   });
 
   var drawLabel = function () {
-    setData({value: testLabels, loading: false});
     $.getJSON("http://localhost:8080/tags?", {
       query: searchText
-    }).then(data => {setData({value:data, loading:false}); console.log(data)});
-    drawLabelsSet(true);
+    }).then(d => {setData({value:d, loading:false}); console.log(d); drawLabelsSet(true);});
   };
 
   return (
@@ -60,12 +58,12 @@ function App() {
         </div>
         <div className="tag-container">
           {drawLabels && !data.loading &&
-            data.value.map((d, index) => (
+            data.value.data.map((d, index) => (
               d.isRouting ? <TagHelp
                 key={index}
                 data={d}
                 onClick={() => {
-                  data.value.splice(index, 1);
+                  data.value.data.splice(index, 1);
                   setData({value: data.value, loading: false});
                 }}
               /> :
