@@ -23,6 +23,12 @@ function App() {
     }).then(d => {setData({value:d, loading:false}); console.log(d); drawLabelsSet(true);});
   };
 
+  var drawLabel2 = function (str) {
+    $.getJSON("http://localhost:8080/tags?", {
+      query: str
+    }).then(d => {setData({value:d, loading:false}); console.log(d); drawLabelsSet(true);});
+  };
+
   return (
     <div className="App">
       <div className="main-container">
@@ -61,9 +67,10 @@ function App() {
                 data={d}
                 onClick={() => {
                   searchTextSet(d.tag);
+                  console.log(d.tag);
                   drawLabelsSet(false);
                   setData({value: data.value, loading: true});
-                  drawLabel();
+                  drawLabel2(d.tag);
                 }}
               />
             ))}
