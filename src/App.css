@@ -63,7 +63,7 @@
   font-size: 20px;
   line-height: 24px;
   color: #ffe;
-  width: 80%;
+  width: 85%;
   padding: 16px 120px 16px 20px;
   margin: 10px 0;
   background: rgba(255,255,255,.2);
@@ -76,10 +76,10 @@
 
 .tag-button {
   font-size: 16px !important;
-  margin: 5px !important;
   padding: 20px 20px !important;
   display: flex !important;
   align-items: center !important;
+  margin: 5px !important;
 }
 
 .tag-button:hover{
@@ -88,4 +88,23 @@
 
 .tag-button:focus{
   color: #b909a2 !important;
+}
+
+#tag-button-help {
+  font-size: 16px !important;
+  padding: 20px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  margin: 5px !important;
+  background: transparent;
+  color:rgba(255, 255, 255, 0.7);;
+  border: dashed 1px;
+}
+
+#tag-button-help:hover{
+  color: white !important;
+}
+
+#tag-button-help:focus{
+  color: white !important;
 }

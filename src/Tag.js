@@ -1,10 +1,10 @@
-import React from 'react'
-import { Button } from 'antd';
+import React from "react";
+import { Button } from "antd";
 
 export default function Tag(props) {
-    return (
-        <Button className="tag-button">
-            {props.data}
-        </Button>
-    )
+  return (
+    <Button className="tag-button" onClick={() => props.onClick()}>
+      {props.data.tag}
+    </Button>
+  );
 }
