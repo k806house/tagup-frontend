@@ -60,8 +60,8 @@ function App() {
                 key={index}
                 data={d}
                 onClick={() => {
-                  searchTextSet(searchText + " " + d.tag);
-                  // drawLabelsSet(false);
+                  searchTextSet(d.tag);
+                  drawLabelsSet(false);
                   setData({value: data.value, loading: true});
                   drawLabel();
                 }}
