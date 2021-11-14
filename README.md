@@ -18,6 +18,9 @@
 ## Демо
 
 ![](img/tagup-demo.mov)
+<video width="320" height="240" controls>
+  <source src="img/tagup-demo.mov" type="video/mp4">
+</video>
 
 ## Бэк
 
