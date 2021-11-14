@@ -8,17 +8,6 @@ import TagHelp from "./TagHelp";
 import $ from "jquery";
 
 
-const testLabels = [
-  { tag: "пантолеты", isRouting: false, ref: "" },
-  { tag: "чуни", isRouting: false, ref: "" },
-  { tag: "шлепки", isRouting: false, ref: "" },
-  { tag: "массажные", isRouting: false, ref: "" },
-  { tag: "женские", isRouting: false, ref: "" },
-  { tag: "luomma", isRouting: false, ref: "" },
-  { tag: "forio", isRouting: false, ref: "" },
-  { tag: "обувь", isRouting: false, ref: "" }
-];
-
 function App() {
   const [drawLabels, drawLabelsSet] = useState(false);
   const [searchText, searchTextSet] = useState("");
@@ -72,8 +61,9 @@ function App() {
                 data={d}
                 onClick={() => {
                   searchTextSet(searchText + " " + d.tag);
-                  drawLabelsSet(false);
-                  setData({value: data.value, loading: true})
+                  // drawLabelsSet(false);
+                  setData({value: data.value, loading: true});
+                  drawLabel();
                 }}
               />
             ))}
